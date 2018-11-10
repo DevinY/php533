@@ -1,0 +1,16 @@
+version: '3.6'
+services:
+ web:
+  build: .
+  image: php533
+  volumes:
+  - ./www:/var/www
+  - ./etc/php.ini:/etc/php.ini
+  ports:
+   - "80:80"
+  networks:
+    - net
+
+######top-level netowks key#######
+networks:
+    net:
